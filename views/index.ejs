@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1><%= title %></h1>
+    <% if(who){ %>
+        <p>
+          這是<%=who %>の部落格世界!
+        </p>
+        <a href="/articles">發表文章<a>
+    <% } else { %>
+
+    <form method="post" action="/verify">
+      <p>
+        名稱：<input type="text" id="username" name="username" />
+        <input type="submit" value="登入"/>
+        <p><font color=rgb(0,200,0)>&nbsp;&nbsp;&nbsp;&nbsp; &diams; please type your name</font></p>
+      </p>
+    </form>
+    <% } %>
+
+
+  </body>
+</html>
